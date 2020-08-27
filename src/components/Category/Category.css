@@ -1,6 +1,13 @@
-.Category {
+.Category .bookContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.Category header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 import './Book.css';
 
-const Book = () => {
+const Book = ({book}) => {
+    
+    //eventuellt knapp vid varje bok som lägger till som favorit
+
     return (
         <div className="Book">
             <div className="bookParameter">

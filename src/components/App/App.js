@@ -8,9 +8,9 @@ const App = () => {
     <div className="App">
       <header className="App-header">
        <h1>Book inspo - what to read next?</h1>
-       <Category />
-       <Category />
-       <Category />
+       <Category category="History"/>
+       <Category category="Science"/>
+       <Category category="Crime"/>
       </header>
     </div>
   );
