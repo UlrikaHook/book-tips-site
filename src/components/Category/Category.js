@@ -9,21 +9,32 @@ const Category = ({category}) => {
 
     useEffect(()=>{
 
-        const getData = async () => {
-            //const url = "https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&format=json&jscmd=data";
-            const url = `http://openlibrary.org/search.json?subject=${category}&limit=3`;
+        async function getData() {
+            const apiKey = "AIzaSyBvJcFRNsQK5A31KFrcu6oX5FHZP9iQ-go";
+            const startIndex = Math.floor(Math.random() * 100);
+            const url = `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&startIndex=${startIndex}&printType=books&maxResults=3&fields=items&key=${apiKey}`
 
             const response = await fetch(url);
-            const jsonResponse = await response.json();
+            const jsonResponse = await response.json()
+            console.log(books);
             console.log(jsonResponse);
+            console.log(jsonResponse.items);
             setBooks(jsonResponse);
+            //setBooks(jsonResponse.items)
+            console.log(books);
+       
         }
 
         getData();
+    
         //API-request based on category
         //put json-result in state books
     }, [])
     
+    /*const bookComponents = books.items.map(book => {
+       console.log(book.volumeInfo.title);
+    })*/
+
     //Tll Books skickas key som React-id samt book i arrayen books.
     return (
         <div className="Category">
@@ -33,6 +44,7 @@ const Category = ({category}) => {
             </header>
             
             <div className="bookContainer">
+
                 <Book />
                 <Book />
                 <Book />

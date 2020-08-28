@@ -9,8 +9,7 @@ const App = () => {
       <header className="App-header">
        <h1>Book inspo - what to read next?</h1>
        <Category category="History"/>
-       <Category category="Science"/>
-       <Category category="Crime"/>
+
       </header>
     </div>
   );
