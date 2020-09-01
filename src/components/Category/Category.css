@@ -1,13 +1,25 @@
-.Category .bookContainer {
+.Category {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 5px;
+    background-color: #46494a;
+}
+
+.bookContainer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+
 }
 
 .Category header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    border: none;
+    background-color: #d7dde0;
+    border-radius: 5px;
+    color: #46494a;
 }

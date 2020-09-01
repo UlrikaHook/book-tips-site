@@ -5,7 +5,7 @@ import Book from '../Book/Book';
 
 const Category = ({category}) => {
     
-    const [books, setBooks] = useState([]);
+    const [books, setBooks] = useState([])
 
     useEffect(()=>{
 
@@ -16,38 +16,39 @@ const Category = ({category}) => {
 
             const response = await fetch(url);
             const jsonResponse = await response.json()
-            console.log(books);
-            console.log(jsonResponse);
-            console.log(jsonResponse.items);
-            setBooks(jsonResponse);
-            //setBooks(jsonResponse.items)
-            console.log(books);
-       
+            console.log(jsonResponse.items)
+            setBooks(jsonResponse.items)
         }
-
         getData();
-    
-        //API-request based on category
-        //put json-result in state books
     }, [])
     
-    /*const bookComponents = books.items.map(book => {
-       console.log(book.volumeInfo.title);
-    })*/
+    const bookComponents = books.map(book => {
+       return (
+           <Book 
+            key = {book.id} 
+            title = {book.volumeInfo.title} 
+            subtitle = {book.volumeInfo.subtitle} 
+            authors = {book.volumeInfo.authors} 
+            description = {book.volumeInfo.description} 
+            image = {(book.volumeInfo.imageLinks === undefined) ? "" : book.volumeInfo.imageLinks.thumbnail}
+           />
+       )
+    })
 
     //Tll Books skickas key som React-id samt book i arrayen books.
     return (
         <div className="Category">
-            <header>
-                <h3>{category}</h3>
-                <button>Show me new books</button>
-            </header>
-            
-            <div className="bookContainer">
 
-                <Book />
-                <Book />
-                <Book />
+            
+            <div>
+                <header>
+                    <h3>{category}</h3>
+                    <button>Show me new books</button>
+                </header>
+                <div className = "bookContainer">
+                    {bookComponents}
+                </div>
+                
             </div>
             
         </div>
