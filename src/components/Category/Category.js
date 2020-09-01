@@ -43,7 +43,7 @@ const Category = ({category}) => {
             <div>
                 <header>
                     <h3>{category}</h3>
-                    <button onClick={load}>Show me new books</button>
+                    <button className="button" onClick={load}>Show me new books</button>
                 </header>
                 <div className = "bookContainer">
                     {bookComponents}

@@ -10,7 +10,7 @@ body {
   background-size: cover;
 }
 
-button {
+.button {
   color: #46494a;
 	text-decoration: none;
 	font-size: 20px;
@@ -22,7 +22,8 @@ button {
   font-family: 'Dosis', sans-serif;
 }
 
-button:hover {
+.button:hover {
   color: #ffeebf;
   background-color: #46494a;;
 }
+
