@@ -1,0 +1,12 @@
+.Categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 900px;
+    border-radius: 5px;
+    background-color: #46494a;
+    margin: 0;
+}

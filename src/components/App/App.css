@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  max-width: 900px;
+  border-radius: 5px;
+  margin: 0;
 
 }
 
