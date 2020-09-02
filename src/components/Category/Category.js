@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './Category.css';
+import css from './Category.module.css';
 import Book from '../Book/Book';
+
+import FindReplaceRoundedIcon from '@material-ui/icons/FindReplaceRounded';
+import noImg from '../../undraw_file_searching_duff.svg';
 
 
 const Category = ({category}) => {
@@ -30,22 +33,25 @@ const Category = ({category}) => {
             subtitle = {book.volumeInfo.subtitle} 
             authors = {book.volumeInfo.authors} 
             description = {book.volumeInfo.description} 
-            image = {(book.volumeInfo.imageLinks === undefined) ? "" : book.volumeInfo.imageLinks.thumbnail}
+            image = {(book.volumeInfo.imageLinks === undefined) ? noImg : book.volumeInfo.imageLinks.thumbnail}
            />
        )
     })
 
     //Tll Books skickas key som React-id samt book i arrayen books.
     return (
-        <div className="Category">
+        <div className={css.Category}>
 
             
             <div>
                 <header>
-                    <h3>{category}</h3>
-                    <button className="button" onClick={load}>Show me new books</button>
+                    <h3>{category.toUpperCase()}</h3>
+                    <button onClick={load} className={css.updateButton}>
+                        <FindReplaceRoundedIcon/>
+                        <div className={css.updateText}>SHOW ME NEW BOOKS</div>
+                        </button>
                 </header>
-                <div className = "bookContainer">
+                <div className = {css.bookContainer}>
                     {bookComponents}
                 </div>
                 

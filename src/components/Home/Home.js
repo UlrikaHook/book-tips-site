@@ -1,10 +1,13 @@
 import React from 'react';
+import css from './Home.module.css';
 
 const Home = () => {
     return(
-        <header className="App-header">
-            <h1>Book inspo - what to read next?</h1>
-        </header>
+        <div className={css.Home} >
+            <h1>What is your next book experience?</h1>
+            <p>This is the ultimate book inspiration site, in order for you to always have a book to long for</p>
+            <p>You can get randomized suggestions based on category or search for books yourself</p>
+        </div>
     )
 }
 

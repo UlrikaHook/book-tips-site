@@ -1,7 +1,9 @@
 import React from 'react';
 
-import './App.css';
+/*import './App.css';*/
 import '../../index.css';
+import css from './App.module.css';
+
 import Navbar from '../Navbar';
 import Home from '../Home';
 import Categories from '../Categories';
@@ -9,9 +11,11 @@ import Search from '../Search';
 import NotFound from '../NotFound';
 import { Switch, Route } from 'react-router-dom';
 
+
+
 const App = () => {
   return (
-    <div className="App">
+    <div className={css.App}>
        <Navbar />
        <Switch>
           <Route path="/" component={Home} exact />
@@ -20,7 +24,9 @@ const App = () => {
           <Route component={NotFound} />
        </Switch>
     </div>
+    
   );
 }
 
 export default App;
+

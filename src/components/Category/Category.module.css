@@ -2,8 +2,10 @@
     width: 100%;
     max-width: 900px;
     border-radius: 5px;
-    background-color: #46494a;
-    margin: 0;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
 
 .bookContainer {
@@ -11,6 +13,8 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    background-color: #ffffeb;
+    border-radius: 3px;
 
 }
 
@@ -20,7 +24,19 @@
     align-items: center;
     justify-content: space-around;
     border: none;
-    background-color: #d7dde0;
+    background-color: #4e8074;
+    color:#ffeebf;
     border-radius: 5px;
-    color: #46494a;
+    font-size: 20px;
+}
+
+.updateButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.updateText{
+    padding-left: 30px;
 }

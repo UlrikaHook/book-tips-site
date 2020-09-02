@@ -1,0 +1,28 @@
+.Categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 900px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Categories .intro{
+    background-color: white;
+    padding: 10px;
+    margin-top: 30px;
+    opacity: 0.7;
+    border-radius: 3px;
+}
+
+.Categories header h1 {
+    font-size: 30px;
+}
+
+.Categories header p{
+    font-size: 20px;
+}
