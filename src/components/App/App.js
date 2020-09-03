@@ -1,8 +1,7 @@
 import React from 'react';
 
-/*import './App.css';*/
-import '../../index.css';
 import css from './App.module.css';
+
 
 import Navbar from '../Navbar';
 import Home from '../Home';
@@ -10,6 +9,7 @@ import Categories from '../Categories';
 import Search from '../Search';
 import NotFound from '../NotFound';
 import { Switch, Route } from 'react-router-dom';
+/*import { View } from 'react-native-web'*/
 
 
 

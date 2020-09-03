@@ -17,35 +17,33 @@ const Book = ({title, subtitle, authors, description, image}) => {
     const changeDescriptionButton = () => {
         if(showDescription){
             return(
-                <div className={css.descriptionButton}>
+                <>
                     <ExpandLessRoundedIcon/>
-                    <div className={css.descriptionText}>
+                    <div className='buttonText'>
                         CLOSE DESCRIPTION
                     </div>
-                </div>   
+                </>   
             )
         } else{
             return(
-                <div className={css.descriptionButton}>
+                <>
                     <ExpandMoreRoundedIcon/>
-                    <div className={css.descriptionText}>
+                    <div className='buttonText'>
                         SHOW DESCRIPTION
                     </div>
-                </div>   
+                </>   
             )
         }
     }
 
-
-
     return (
         <div className={css.Book}>
-                <img src={image}></img>
-                <p className={css.title}>{title}</p>
-                <p className={css.subtitle}>{subtitle}</p>
-                <p className={css.authors}>{!authors ? "" : authors[0]}</p>
-                <p className={css.description}>{showDescription ? description : ""}</p>
-                <button onClick={toggleDescription}>{changeDescriptionButton()}</button>
+            <img src={image}></img>
+            <p className={css.title}>{title}</p>
+            <p className={css.subtitle}>{subtitle}</p>
+            <p className={css.authors}>{!authors ? "" : authors[0]}</p>
+            <p className={css.description}>{showDescription ? description : ""}</p>
+            <button className='button' onClick={toggleDescription}>{changeDescriptionButton()}</button>
 
         </div>
     );

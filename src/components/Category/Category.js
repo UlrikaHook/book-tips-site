@@ -40,23 +40,19 @@ const Category = ({category}) => {
 
     //Tll Books skickas key som React-id samt book i arrayen books.
     return (
-        <div className={css.Category}>
-
-            
+        <div className={css.Category}>  
             <div>
-                <header>
+                <header className="containerHeader">
                     <h3>{category.toUpperCase()}</h3>
-                    <button onClick={load} className={css.updateButton}>
+                    <button onClick={load} className='button'>
                         <FindReplaceRoundedIcon/>
-                        <div className={css.updateText}>SHOW ME NEW BOOKS</div>
-                        </button>
+                        <div className='buttonText'>SHOW ME NEW BOOKS</div>
+                    </button>
                 </header>
                 <div className = {css.bookContainer}>
                     {bookComponents}
                 </div>
-                
             </div>
-            
         </div>
     );
 }

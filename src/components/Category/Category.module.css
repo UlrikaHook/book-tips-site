@@ -2,10 +2,16 @@
     width: 100%;
     max-width: 900px;
     border-radius: 5px;
-    
     margin-top: 20px;
     margin-bottom: 20px;
     
+}
+
+.Category header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .bookContainer {
@@ -16,27 +22,4 @@
     background-color: #ffffeb;
     border-radius: 3px;
 
-}
-
-.Category header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    border: none;
-    background-color: #4e8074;
-    color:#ffeebf;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-.updateButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-between;
-}
-
-.updateText{
-    padding-left: 30px;
 }

@@ -2,32 +2,20 @@
     width: 100%;
 }
 
-.Navbar header {
+.paper{
+    width: 100%;
+    background-color: #4e8074;
+}
+
+.header {
     font-size: 60px;
     color:#ffeebf;
   }
 
-.paper{
-    width: 100%;
-    background-color: #4e8074;
 
-}
 
 .menuTabs {
-    font-family: 'Dosis';
     font-weight: bolder;
-    color: #ffeebf;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px;
-    background-color: #46494a;
-    margin: 5px;
-    border-radius: 3px;
-    border: none;
     height: 20px;
 }
 
-.Navbar .menuTabs:hover{
-    background-color:#ffeebf;
-    color: #46494a;
-}

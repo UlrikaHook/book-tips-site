@@ -18,7 +18,7 @@ const Navbar = () => {
     <StylesProvider injectFirst>{
         <div className={css.Navbar}>
         <Paper className={css.paper}>
-        <header>BOOK INSPIRATION</header>
+        <header className={css.header}>BOOK INSPIRATION</header>
         <Tabs
             variant="fullWidth" 
             centered= "true"
@@ -27,14 +27,13 @@ const Navbar = () => {
             aria-label="icon label tabs example" 
             
         >
-            <Tab className={css.menuTabs} icon={<HomeRoundedIcon />} label="HOME" component={Link} to="/"/>
-            <Tab className={css.menuTabs} icon={<MenuBookRoundedIcon />} label="CATEGORIES" component={Link} to="/categories"/>
-            <Tab className={css.menuTabs} icon={<SearchRoundedIcon />} label="SEARCH" component={Link} to="/search" />
+            <Tab className={`${css.menuTabs} button`} icon={<HomeRoundedIcon />} label="HOME" component={Link} to="/"/>
+            <Tab className={`${css.menuTabs} button`} icon={<MenuBookRoundedIcon />} label="CATEGORIES" component={Link} to="/categories"/>
+            <Tab className={`${css.menuTabs} button`} icon={<SearchRoundedIcon />} label="SEARCH" component={Link} to="/search" />
         </Tabs>
         </Paper>
     </div>
-    }</StylesProvider>
-   
+    }</StylesProvider> 
   );
 }
 
