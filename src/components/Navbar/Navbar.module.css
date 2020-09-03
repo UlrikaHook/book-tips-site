@@ -1,0 +1,21 @@
+.Navbar {
+    width: 100%;
+}
+
+.paper{
+    width: 100%;
+    background-color: #4e8074;
+}
+
+.header {
+    font-size: 60px;
+    color:#ffeebf;
+  }
+
+
+
+.menuTabs {
+    font-weight: bolder;
+    height: 20px;
+}
+

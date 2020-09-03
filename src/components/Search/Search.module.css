@@ -1,0 +1,27 @@
+.Search {
+    width: 80%;
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    background-color: #4e8074;
+    color:#ffeebf;
+    border-radius: 5px;
+    margin-top:30px;
+    height: 70px;
+}
+
+.searchBox input{
+    height: 30px;
+    width: 60%;
+    background-color: #ffffeb;
+    border: none;
+    border-radius: 3px;
+    font-family: "Dosis";
+    font-size: 20px;
+}
+

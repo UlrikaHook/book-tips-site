@@ -1,0 +1,25 @@
+.Category {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.Category header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bookContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffffeb;
+    border-radius: 3px;
+
+}

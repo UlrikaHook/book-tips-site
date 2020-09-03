@@ -1,0 +1,42 @@
+.Book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    flex-basis: 25%;
+    color: #46494a;
+    border: #46494a solid 1px;
+    width: 80%;
+}
+
+.Book img {
+    height: 200px;
+}
+
+.Book button {
+    font-size: 15px;
+}
+
+.title {
+    font-size: 20px;
+    height: 90px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    height: 50px;
+}
+
+.authors {
+    font-size: 19px;
+    height: 60px;
+}
+
+
+.description {
+    font-size: 16px;
+    font-weight: lighter;
+}
