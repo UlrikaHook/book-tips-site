@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import css from './Category.module.css';
 import Book from '../Book/Book';
+import { loadData } from '../../api.js';
 
 import FindReplaceRoundedIcon from '@material-ui/icons/FindReplaceRounded';
 import noImg from '../../undraw_file_searching_duff.svg';
@@ -11,10 +12,15 @@ const Category = ({category}) => {
     const [books, setBooks] = useState([])
 
     useEffect(()=>{
-        load();
+        getData();
     }, [])
 
-    const load = async () => {
+    const getData = async () => {
+        const startIndex = Math.floor(Math.random() * 100);
+        const data = await loadData(`subject:${category}`, 3, startIndex);
+        setBooks(data);
+    }
+    /*const load = async () => {
         const apiKey = "AIzaSyBvJcFRNsQK5A31KFrcu6oX5FHZP9iQ-go";
         const startIndex = Math.floor(Math.random() * 100);
         const url = `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&startIndex=${startIndex}&printType=books&maxResults=3&fields=items&key=${apiKey}`
@@ -23,7 +29,7 @@ const Category = ({category}) => {
         const jsonResponse = await response.json()
         console.log(jsonResponse.items)
         setBooks(jsonResponse.items)
-    }
+    }*/
     
     const bookComponents = books.map(book => {
        return (
@@ -44,12 +50,12 @@ const Category = ({category}) => {
             <div>
                 <header className="containerHeader">
                     <h3>{category.toUpperCase()}</h3>
-                    <button onClick={load} className='button'>
+                    <button onClick={getData} className='button'>
                         <FindReplaceRoundedIcon/>
                         <div className='buttonText'>SHOW ME NEW BOOKS</div>
                     </button>
                 </header>
-                <div className = {css.bookContainer}>
+                <div className = 'bookContainer'>
                     {bookComponents}
                 </div>
             </div>

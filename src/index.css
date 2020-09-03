@@ -21,12 +21,17 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: space-between;
+  cursor: pointer;
 }
 
 .button:hover {
   color: #46494a;
   background-color: #ffeebf;
   
+}
+
+.button:disabled {
+  cursor: not-allowed;
 }
 
 .buttonText{
@@ -55,5 +60,15 @@ body {
     color:#ffeebf;
     border-radius: 5px;
     font-size: 20px;
+}
+
+.bookContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #ffffeb;
+  border-radius: 3px;
+  flex-wrap: wrap;
 }
 
