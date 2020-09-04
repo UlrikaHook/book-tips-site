@@ -20,26 +20,20 @@ const Category = ({category}) => {
         const data = await loadData(`subject:${category}`, 3, startIndex);
         setBooks(data);
     }
-    /*const load = async () => {
-        const apiKey = "AIzaSyBvJcFRNsQK5A31KFrcu6oX5FHZP9iQ-go";
-        const startIndex = Math.floor(Math.random() * 100);
-        const url = `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&startIndex=${startIndex}&printType=books&maxResults=3&fields=items&key=${apiKey}`
-
-        const response = await fetch(url);
-        const jsonResponse = await response.json()
-        console.log(jsonResponse.items)
-        setBooks(jsonResponse.items)
-    }*/
     
     const bookComponents = books.map(book => {
+        const bookObj = {
+            id: book.id,
+            title: book.volumeInfo.title,
+            subtitle: book.volumeInfo.subtitle,
+            authors: book.volumeInfo.authors,
+            description: book.volumeInfo.description, 
+            image: (book.volumeInfo.imageLinks === undefined) ? noImg : book.volumeInfo.imageLinks.thumbnail
+        }
        return (
            <Book 
             key = {book.id} 
-            title = {book.volumeInfo.title} 
-            subtitle = {book.volumeInfo.subtitle} 
-            authors = {book.volumeInfo.authors} 
-            description = {book.volumeInfo.description} 
-            image = {(book.volumeInfo.imageLinks === undefined) ? noImg : book.volumeInfo.imageLinks.thumbnail}
+            book = {bookObj}
            />
        )
     })

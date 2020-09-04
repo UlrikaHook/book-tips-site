@@ -40,3 +40,21 @@
     font-size: 16px;
     font-weight: lighter;
 }
+
+.favoriteBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.favorite {
+    color: #f01111;
+    cursor: pointer;
+}
+
+.notFavorite{
+    color: #b5c4c1;
+    cursor: pointer;
+}
