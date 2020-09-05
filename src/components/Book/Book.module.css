@@ -13,6 +13,7 @@
 
 .Book img {
     height: 200px;
+    max-width: 130px;
 }
 
 .Book button {

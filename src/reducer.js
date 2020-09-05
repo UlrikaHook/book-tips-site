@@ -3,14 +3,14 @@ import noImg from './undraw_file_searching_duff.svg';
 
 const initialState = {
     books: [
-        {
+       /* {
             id: 2345,
             title: "Hej",
             subtitle: "på dig",
             authors: ["Selma"],
             description: "En hej-bok",
             image: noImg
-        }
+        }*/
     ]
 }
 

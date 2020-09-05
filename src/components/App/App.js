@@ -10,9 +10,6 @@ import Categories from '../Categories';
 import Search from '../Search';
 import NotFound from '../NotFound';
 import { Switch, Route } from 'react-router-dom';
-/*import { View } from 'react-native-web'*/
-
-
 
 const App = () => {
   return (

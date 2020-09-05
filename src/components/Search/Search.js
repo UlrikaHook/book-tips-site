@@ -5,7 +5,6 @@ import { loadData } from '../../api.js';
 import Book from '../Book/Book';
 
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
-import noImg from '../../undraw_file_searching_duff.svg';
 
 const Search = () => {
 
@@ -26,28 +25,19 @@ const Search = () => {
         setTitleInput(event.target.value);
     }
 
-    let bookComponents;
-
-    if (typeof books === 'undefined') {
-        bookComponents = 
-            <p>No books found!</p>
-    } else {
-        bookComponents = books.map(book => {
-            const bookObj = {
-                id: book.id,
-                title: book.volumeInfo.title,
-                subtitle: book.volumeInfo.subtitle,
-                authors: book.volumeInfo.authors,
-                description: book.volumeInfo.description, 
-                image: (book.volumeInfo.imageLinks === undefined) ? noImg : book.volumeInfo.imageLinks.thumbnail
-            }
-           return (
-               <Book 
-                key = {book.id} 
-                book = {bookObj}
-               />
-           )
-        })
+    const bookComponents = () => {
+        if (books === undefined) {
+            return <p>No books found!</p>
+        } else {
+            return books.map(book => {
+                return(
+                   <Book 
+                    key = {book.id} 
+                    book = {book}
+                   />
+                )
+            })
+        }
     }
 
     return(
@@ -65,7 +55,7 @@ const Search = () => {
                         </button> 
                     </div>
                     <div className='bookContainer'>
-                        {bookComponents}
+                        {bookComponents()}
                     </div>
          </div>
     )

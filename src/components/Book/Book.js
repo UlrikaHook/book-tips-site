@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import css from './Book.module.css';
 import { StylesProvider } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
+import { addFavorite } from '../../actions';
+import { removeFavorite } from '../../actions';
 
 import ExpandMoreRoundedIcon from '@material-ui/icons/ExpandMoreRounded';
 import ExpandLessRoundedIcon from '@material-ui/icons/ExpandLessRounded';
 import FavoriteRoundedIcon from '@material-ui/icons/FavoriteRounded';
-import { addFavorite } from '../../actions';
-import { removeFavorite } from '../../actions';
 
-const Book = ({book, books, removeFav, addFav}) => {
+
+const Book = ({book, favoriteBooks, removeFav, addFav}) => {
 
 
     const setInitialIsFavorite = ()=>{
         let initialFavorite = false;
-        books.forEach((favorite) => {
+        favoriteBooks.forEach((favorite) => {
             if(favorite.id === book.id){
                 initialFavorite = true;
             }   
@@ -84,7 +85,7 @@ const Book = ({book, books, removeFav, addFav}) => {
 
 const mapStateAsProps = (state) =>{
     return {
-        books: state.books
+        favoriteBooks: state.books
     }
 }
 
