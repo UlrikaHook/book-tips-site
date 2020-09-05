@@ -1,5 +1,6 @@
 .Search {
     width: 80%;
+    max-width: 900px;
 }
 
 .searchBox {
@@ -17,7 +18,7 @@
 
 .searchBox input{
     height: 30px;
-    width: 60%;
+    width: 30%;
     background-color: #ffffeb;
     border: none;
     border-radius: 3px;
