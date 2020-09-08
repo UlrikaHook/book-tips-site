@@ -5,3 +5,9 @@ Simple book site that fetch book data from Google Books API and displays it base
 Function of adding Favorite books works, but the program doesn’t yet allow favorites to be stored based on user.  
 
 Technologies: JavaScript ES6, React, Redux, Router. CSS modules for styling. 
+
+Screenshots:
+
+![Screenshit Search](./screenshotSearch.jpg)
+![Screenshit Category](./screenshotCategories.jpg)
+
